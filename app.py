@@ -78,7 +78,7 @@ def main():
         display_home_content()   
     # # Display a sidebar to choose input type
     st.markdown("<br><br><br>", unsafe_allow_html=True)
-    input_type = st.sidebar.radio("**Input Type**", options=["Unselected","Upload CSV File", "Simple Prediction"])
+    input_type = st.sidebar.radio("Input Type", options=["Unselected","Upload CSV File", "Simple Prediction"])
     
     if input_type == "Upload CSV File":
         # Upload CSV file
