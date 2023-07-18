@@ -8,7 +8,7 @@ import numpy as np
 
 # Function to perform prediction on the DataFrame
 def perform_prediction(data):
-    model = joblib.load("C:\\Users\\imane\\Documents\\PFA1\\boost_classifier.pkl")
+    model = joblib.load("model.pkl")
     # Perform your prediction logic here
     # Replace this dummy example with your actual prediction code
     predictions = model.predict(data)
