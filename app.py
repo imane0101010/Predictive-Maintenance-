@@ -8,7 +8,7 @@ import numpy as np
 
 # Function to perform prediction on the DataFrame
 def perform_prediction(data):
-    model = joblib.load("https://github.com/imane0101010/Predictive-Maintenance-/blob/0aadc950f52e1f7fe8648b067e60c7615c4bbd59/model.pkl")
+    model = joblib.load("model.pkl")
     # Perform your prediction logic here
     # Replace this dummy example with your actual prediction code
     predictions = model.predict(data)
