@@ -77,14 +77,14 @@ def main():
     if st.sidebar.button("Home"):
         display_home_content()   
     # # Display a sidebar to choose input type
-    input_type = st.sidebar.radio("Input Type", options=["Unselected","Upload CSV File", "Simple Prediction"])
+    st.markdown("<br><br><br>", unsafe_allow_html=True)
+    input_type = st.sidebar.radio("**Input Type**", options=["Unselected","Upload CSV File", "Simple Prediction"])
     
     if input_type == "Upload CSV File":
         # Upload CSV file
         file = st.file_uploader("Upload CSV file", type=["csv"])
         
         if file is not None:
-            st.write("File uploaded successfully.")
             
             # Read CSV file into DataFrame
             data = pd.read_csv(file)
