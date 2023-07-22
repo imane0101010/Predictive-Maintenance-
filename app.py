@@ -75,6 +75,7 @@ def main():
     st.markdown("---")
     #st.sidebar.button("Home")
     if st.sidebar.button("Home"):
+        st.experimental_rerun()
         display_home_content()   
     # # Display a sidebar to choose input type
     st.markdown("<br><br><br>", unsafe_allow_html=True)
