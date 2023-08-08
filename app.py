@@ -93,7 +93,7 @@ def main():
             # Display the DataFrame and predictions side by side
             columns_to_drop = ['UDI', 'Product ID', 'Target', 'Failure Type']
             df = data.drop(columns_to_drop, axis=1)
-            #df_init = data.drop(['Target', 'Failure Type'],axis=1)          
+            df_init = data.drop(['Target', 'Failure Type'],axis=1)          
             st.subheader("Input DataFrame")
             st.write(df_init)
             if st.button("Predict"):
@@ -103,7 +103,7 @@ def main():
                 df1 = preprocess(df1)
                 predictions = perform_prediction(df1)
                 final = mapping(predictions)
-                st.write(pd.concat([data[['UDI','Product ID']], pd.DataFrame(final, columns=['Failure Type Prediction'])], axis=1))
+                st.write(pd.concat([df_init[['UDI','Product ID']], pd.DataFrame(final, columns=['Failure Type Prediction'])], axis=1))
     elif input_type == "Unselected":
         display_home_content()   
     elif input_type == "Simple Prediction":
