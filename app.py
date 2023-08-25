@@ -27,7 +27,7 @@ def preprocess(df):
     return df
 
 def mapping(pred):
-    value_mapping = {1: 'No Failure', 2: 'Power Failure', 3: 'Tool Wear Failure', 4: 'Overstrain Failure', 5: 'Random Failures', 6: 'Heat Dissipation Failure'}
+    value_mapping = {1: 'No Failure', 3: 'Power Failure', 5: 'Tool Wear Failure', 2: 'Overstrain Failure', 4: 'Random Failures', 0: 'Heat Dissipation Failure'}
     pred_int = pred.astype(int)
     mapper = np.vectorize(lambda x: value_mapping.get(x, 'Unknown'))
     # Apply the mapping to the input array
